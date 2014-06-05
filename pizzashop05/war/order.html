@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>ピザの注文</title>
+    </head>
+    <body>
+        <h1>メニュー一覧</h1>
+        以下の項目から商品を選んで、注文する商品番号とサイズを記入してください。<br>
+        サイズは{ M(+ ¥0 ), L(+ ¥500) }の二種類です。<br>
+        ソースはすべてトマトベースです。新鮮なトマトを使用しております。<br>
+        ※記入例...1. L
+    <br>
+    <br>
+    <h2>メニュー</h2>
+    <ol>
+   		<li>¥800-  マルゲリータ(水牛のモッツァレラチーズ、フレッシュバジリコ)</li>
+    	<li>¥850-  ビスマルク(モルタデッラ、モッツァレラ、温泉卵、パルミジャーノ)</li>
+    	<li>¥1000- プロシュート(モッツァレラ、生ハム、ルッコラ)</li>
+    	<li>¥900-  クワトロ(モッツァレラ、ゴルゴンゾーラ、パルミジャーノ、リコッタ)</li>
+    </ol>
+        <table>
+        <form method="post" action="/order">
+            <tr><th>ORDER:</th><td><input type="text" name="order"></td></tr>
+              <tr><th>NAME:</th><td><input type="text" name="name"></td></tr>
+              <tr><th>TEL:</th><td><textarea name="tel"></textarea></td></tr>
+            <tr><th></th><td><input type="submit" value="追加"></td></tr>
+        </form>
+        </table>
+    </body>
+</html>

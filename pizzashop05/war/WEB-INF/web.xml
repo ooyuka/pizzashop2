@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+		<servlet-name>PizzaShop</servlet-name>
+		<servlet-class>s.pizza.PizzaShopServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PizzaShop</servlet-name>
+		<url-pattern>/pizzashop</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+	<servlet>
+    	<servlet-name>order_orderdata</servlet-name>
+    	<servlet-class>s.pizza.OrderDataServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+    	<servlet-name>order_orderdata</servlet-name>
+		<url-pattern>/order</url-pattern>
+	</servlet-mapping>
+		<servlet>
+    	<servlet-name>editorder_orderdata</servlet-name>
+    	<servlet-class>s.pizza.EditOrderDataServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+    	<servlet-name>editorder_orderdata</servlet-name>
+    	<url-pattern>/edit</url-pattern>
+	</servlet-mapping>
+	<servlet>
+    	<servlet-name>delorder_orderdata</servlet-name>
+    	<servlet-class>s.pizza.DelOrderDataServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+    	<servlet-name>delorder_orderdata</servlet-name>
+    	<url-pattern>/del</url-pattern>
+	</servlet-mapping>
+			<servlet>
+    	<servlet-name>clerkedit_orderdata</servlet-name>
+    	<servlet-class>s.pizza.ClerkEditDataServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+    	<servlet-name>clerkedit_orderdata</servlet-name>
+    	<url-pattern>/cedit</url-pattern>
+	</servlet-mapping>
+	<servlet>
+    	<servlet-name>clerkdel_orderdata</servlet-name>
+    	<servlet-class>s.pizza.ClerkDelDataServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+    	<servlet-name>clerkdel_orderdata</servlet-name>
+    	<url-pattern>/cdel</url-pattern>
+	</servlet-mapping>
+</web-app>
