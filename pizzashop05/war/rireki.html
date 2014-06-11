@@ -12,8 +12,9 @@
             if (json.length >= 1){
                 for (var i = 0;i < json.length;i++){
                     res += '<tr><td>' + json[i].id + '</td>';
-                    res += '<td>' + json[i].name + '</td>' + '<td>' + json[i].order + '</td>' +
-                    '<td><a href="editorder.html?id=' + json[i].id + '">Edit</td>' +
+                    res += '<td>' + json[i].name + '</td>' +
+                    '<td>' + json[i].order + '</td>' +                    
+                    '<td><a href="editorder.html?id=' +json[i].id + '">Edit</td>' +
                     '<td><a href="delorder.html?id=' + json[i].id + '">Delete</td></tr>';
 
                 }

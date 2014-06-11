@@ -30,8 +30,10 @@ public class OrderDataServlet extends HttpServlet {
 	        String order = req.getParameter("order");
  	        String name = req.getParameter("name");
 	        String tel = req.getParameter("tel");
+	        String addr = req.getParameter("addr");
+	        String zip = req.getParameter("zip");
 	        Date date = Calendar.getInstance().getTime();
-	        OrderData data = new OrderData(order,name,tel,date);
+	        OrderData data = new OrderData(order,name,tel,addr,zip,date);
 	        PersistenceManagerFactory factory = PMF.get();
 	        PersistenceManager manager = factory.getPersistenceManager();
 	        try {

@@ -16,7 +16,9 @@
             var data = arr[0];
             var msg = '<table border="1"><tr><td>' + data.order + '</td></tr>';
             msg += '<tr><td>' + data.name + '</td></tr>';
-            msg += '<tr><td>' + data.tel + '</td></tr></table>';
+            msg += '<tr><td>' + data.tel + '</td></tr>;
+            msg += '<tr><td>' + data.zip + '</td></tr>';
+            msg += '<tr><td>' + data.addr + '</td></tr></table>';
             document.getElementById("data").innerHTML = msg;
             document.getElementById("id").value = data.id;
         }

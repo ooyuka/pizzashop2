@@ -22,12 +22,21 @@ public class OrderData {
      
     @Persistent
     private Date datetime;
+    
+    @Persistent
+    private String addr;
 
-    public OrderData(String order, String name, String tel, Date datetime) {
+    @Persistent
+    private String zip;
+    
+    
+    public OrderData(String order, String name, String tel, String addr, String zip, Date datetime) {
         super();
         this.order = order;
         this.name = name;
         this.tel = tel;
+        this.addr = addr;
+        this.zip = zip;
         this.datetime = datetime;
         
     }
@@ -56,6 +65,22 @@ public class OrderData {
         this.name = name;
     }
  
+    public String getAdr() {
+        return addr;
+    }
+ 
+    public void setAdr(String adr) {
+        this.addr = adr;
+    }
+    
+    public String getAdrn() {
+        return zip;
+    }
+ 
+    public void setAdrn(String adrn) {
+        this.zip = adrn;
+    }
+    
     public String getTel() {
         return tel;
     }

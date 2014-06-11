@@ -2,7 +2,7 @@ package s.pizza;
 
 import java.io.IOException;
 import java.util.*;
- 
+
 import javax.jdo.*;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
@@ -27,12 +27,16 @@ public class ClerkEditDataServlet extends HttpServlet {
         String order = req.getParameter("order");
         String name = req.getParameter("name");
         String tel = req.getParameter("tel");
+        String addr = req.getParameter("addr");
+        String zip = req.getParameter("zip");
         PersistenceManagerFactory factory = PMF.get();
         PersistenceManager manager = factory.getPersistenceManager();
         OrderData data = (OrderData)manager.getObjectById(OrderData.class,id2);
         data.setOrder(order);
         data.setName(name);
         data.setTel(tel);
+        data.setAdr(addr);
+        data.setAdrn(zip);
         manager.close();
         resp.sendRedirect("/clerk.html");
     }

@@ -3,6 +3,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <title>ピザの注文</title>
+        <script src="ajaxzip2/prototype.js"></script>
+        <script src="ajaxzip2/ajaxzip2.js" charset="UTF-8"></script>
     </head>
     <body>
         <h1>メニュー一覧</h1>
@@ -23,7 +25,9 @@
         <form method="post" action="/order">
             <tr><th>ORDER:</th><td><input type="text" name="order"></td></tr>
               <tr><th>NAME:</th><td><input type="text" name="name"></td></tr>
-              <tr><th>TEL:</th><td><textarea name="tel"></textarea></td></tr>
+              <tr><th>TEL:</th><td><input type="text" name="tel"></td></tr>
+              <tr><th>〒:</th><td><input type="text" name="zip" onKeyUp="AjaxZip2.zip2addr(this,'addr','addr');"></td></tr>
+              <tr><th>ADDRESS:</th><td><input type="text" name="addr"></td></tr>
             <tr><th></th><td><input type="submit" value="追加"></td></tr>
         </form>
         </table>

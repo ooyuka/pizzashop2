@@ -50,7 +50,9 @@ public class PizzaShopServlet extends HttpServlet {
             for(OrderData data:list){
                 res += "{id:" + data.getId() + ",name:'" + data.getName() + "',order:'" +
                         data.getOrder() + "',date:'" + data.getDatetime() +
-                        "',tel:'" + data.getTel() + "'},";
+                        "',tel:'" + data.getTel() + 
+                        "',zip:'" + data.getAdrn() + 
+                        "',addr:'" + data.getAdr() + "'},";
             }
         }
         res += "]";

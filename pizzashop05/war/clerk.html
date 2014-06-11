@@ -12,7 +12,11 @@
             if (json.length >= 1){
                 for (var i = 0;i < json.length;i++){
                     res += '<tr><td>' + json[i].id + '</td>';
-                    res += '<td>' + json[i].name + '</td>' + '<td>' + json[i].order + '</td>' + '<td>' + json[i].tel + '</td>' +
+                    res += '<td>' + json[i].name + '</td>' + 
+                    '<td>' + json[i].order + '</td>' + 
+                    '<td>' + json[i].tel + '</td>' +
+                    '<td>' + json[i].zip + '</td>' +
+                    '<td>' + json[i].addr + '</td>' +
                     '<td><a href="clerkedit.html?id=' + json[i].id + '">Edit</td>' +
                     '<td><a href="clerkdel.html?id=' + json[i].id + '">Delete</td></tr>';
 
@@ -29,7 +33,7 @@
     <br>
     顧客の注文履歴が更新順に表示されています。<br>
     注文内容と名前の確認を徹底してください。<br>
-    id番号, 名前, 注文内容,　電話番号の順に表示しています。<br>
+    id番号, 名前, 注文内容, 電話番号, 郵便番号, 住所の順に表示しています。<br>
     <br> 
     <br>
     <br>
